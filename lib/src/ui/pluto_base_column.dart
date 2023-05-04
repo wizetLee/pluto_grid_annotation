@@ -3,6 +3,7 @@ import 'package:pluto_grid/pluto_grid.dart';
 
 import 'ui.dart';
 
+///  他就是列头！！！
 class PlutoBaseColumn extends PlutoStatefulWidget
     implements PlutoVisibilityLayoutChild {
   final PlutoGridStateManager stateManager;

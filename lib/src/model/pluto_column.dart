@@ -32,6 +32,7 @@ class PlutoColumn {
   ///
   /// Text, number, select, date, time, etc.
   /// ex) PlutoColumnType.text(), PlutoColumnType.number() ...
+  /// UI的样式
   PlutoColumnType type;
 
   bool readOnly;
@@ -61,6 +62,7 @@ class PlutoColumn {
   ///   ],
   /// ),
   /// ```
+  /// 富文本？
   InlineSpan? titleSpan;
 
   /// Customisable cell padding.
@@ -82,7 +84,7 @@ class PlutoColumn {
   PlutoColumnSort sort;
 
   /// Formatter for display of cell values.
-  PlutoColumnValueFormatter? formatter;
+  PlutoColumnValueFormatter? formatter; // 列下面的数值的表现形式（数值的样式）
 
   /// Apply the formatter in the editing state.
   /// However, it is applied only when the cell is readonly
@@ -117,7 +119,7 @@ class PlutoColumn {
   ///
   /// Consider wrapping a RepaintBoundary widget
   /// if you are defining custom cells with high paint cost.
-  PlutoColumnRenderer? renderer;
+  PlutoColumnRenderer? renderer; // 列下面的widget的样式（列中widget的样式）
 
   /// A callback that returns a widget
   /// for expressing aggregate values at the bottom.
@@ -133,20 +135,20 @@ class PlutoColumn {
   ///   );
   /// },
   /// ```
-  PlutoColumnFooterRenderer? footerRenderer;
+  PlutoColumnFooterRenderer? footerRenderer; // footer的样式啊！！
 
   /// If [PlutoAutoSizeMode] is enabled,
   /// column autoscaling is ignored if [suppressedAutoSize] is true.
-  bool suppressedAutoSize;
+  bool suppressedAutoSize; // 禁止自动适配尺寸
 
   /// Change the position of the column by dragging the column title.
-  bool enableColumnDrag;
+  bool enableColumnDrag; // 列拖动
 
   /// Change the position of the row by dragging the icon in the cell.
-  bool enableRowDrag;
+  bool enableRowDrag; // 行拖动
 
   /// A checkbox appears in the cell of the column.
-  bool enableRowChecked;
+  bool enableRowChecked; //
 
   /// Sort rows by tapping on the column heading.
   bool enableSorting;
@@ -336,11 +338,11 @@ class PlutoColumn {
 }
 
 class PlutoColumnRendererContext {
-  final PlutoColumn column;
+  final PlutoColumn column; // 列
 
-  final int rowIdx;
+  final int rowIdx; //
 
-  final PlutoRow row;
+  final PlutoRow row; // 行
 
   final PlutoCell cell;
 

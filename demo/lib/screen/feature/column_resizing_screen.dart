@@ -31,8 +31,10 @@ class _ColumnResizingScreenState extends State<ColumnResizingScreen> {
 
     final dummyData = DummyData(10, 30);
 
+    /// 航头
     columns.addAll(dummyData.columns);
 
+    // 底部下面的数据
     rows.addAll(dummyData.rows);
   }
 
